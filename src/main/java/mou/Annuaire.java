@@ -1,11 +1,24 @@
 package mou;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public interface Annuaire
-{
-     public void printAnnuaireName();
+public class Annuaire {
+   
+    private Composant racine;
 
-	
+    
+    public Annuaire(final Composant r) {
+        this.racine = r;
+    }
+
+    public String hierachie() {
+        String s = "";
+        ArrayList<String> list = racine.hierarchie();
+        for (String mou : list) {
+            s = s.concat(mou + "\n");
+        }
+        return s;
+    }
+
+   
 }
