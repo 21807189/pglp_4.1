@@ -3,7 +3,7 @@ package mou;
 import java.util.ArrayList;
 import java.time.LocalDate;
 
-public final class Personnel {
+public final class Personnel implements Composant{
 	private final String  nom;
 	private final String prenom;
 	private final java.time.LocalDate dateNaissance;
@@ -15,7 +15,7 @@ public final class Personnel {
 		private final java.time.LocalDate dateNaissance;
 		private ArrayList<Integer> numTelephone;
 		
-		public Builder(final String nom, final String prenom, final java.time.LocalDate dateNaissance) {
+		public Builder(final String nom, final String prenom, final java.time.LocalDate dateNaissance, final telephone num) {
 			
 			this.nom = nom;
 			this.prenom = prenom;
@@ -39,5 +39,10 @@ public final class Personnel {
 		prenom = builder.prenom;
 		dateNaissance = builder.dateNaissance;
 		numTelephone = builder.numTelephone;
+	}
+
+	public ArrayList<String> hierarchie() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

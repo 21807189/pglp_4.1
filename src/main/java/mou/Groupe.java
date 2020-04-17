@@ -31,8 +31,8 @@ public class Groupe implements Composant, IterableComposant {
     }
 
     public ArrayList<String> hierarchie() {
-        ArrayList<String> list = new ArrayList<String>();
-        list.add(this.toString());
+        ArrayList<String> liste = new ArrayList<String>();
+        liste.add(this.toString());
         IterateurComposant ite = this.iterateur();
         Composant c;
         while (ite.hasNext()) {
@@ -43,10 +43,10 @@ public class Groupe implements Composant, IterableComposant {
                 } else {
                     s = "\t|-   " + s;
                 }
-                list.add(s);
+                liste.add(s);
             }
         }
-        return list;
+        return liste;
     }
 
     
