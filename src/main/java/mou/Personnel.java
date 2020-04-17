@@ -1,6 +1,8 @@
 package mou;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.awt.List;
 import java.time.LocalDate;
 
 public final class Personnel implements Composant{
@@ -32,6 +34,11 @@ public final class Personnel implements Composant{
 		public Personnel build() {
 			return new Personnel(this);
 		}
+
+		public Builder addnumTelephone(telephone telephone) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
 	
 	private Personnel(final Builder builder) {
@@ -45,4 +52,21 @@ public final class Personnel implements Composant{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	   public String getNom() {
+	        return nom;
+	    }
+
+	   
+	    public String getPrenom() {
+	        return prenom;
+	    }
+
+	    public LocalDate getDateNaissance() {
+	        return dateNaissance;
+	    }
+	    public java.util.List<Integer> getnumTelephone() {
+	        return Collections.unmodifiableList(numTelephone);
+	    }
+
 }
